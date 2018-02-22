@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sl_root"
+    tools:context="dayeltwelve.com.lrm.kotlinday12.MainActivity">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:id="@+id/cl_root"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_bar_chart"
+        android:text="@string/bar_chart"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/unit_15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart_bar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bar_chart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_line_chart"
+        android:text="@string/line_chart"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/unit_15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart_bar" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart_line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_line_chart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_pie_chart"
+        android:text="@string/pie_chart"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/unit_15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart_line" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart_pie"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pie_chart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        />
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
